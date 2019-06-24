@@ -22,12 +22,12 @@ public class PreintegrateSSS : MonoBehaviour
         PreintegrateSSSCompute.Dispatch(KernelPreintegrateSSS, lut.width / 8, lut.height / 8, 1);
         RenderTexture tmp = RenderTexture.active;
         RenderTexture.active = lut;
-        RenderTexture.active = tmp;
         Texture2D pic = new Texture2D(lut.width, lut.height, TextureFormat.RGBA32, true, true);
         pic.ReadPixels(new Rect(0, 0, lut.width, lut.height), 0, 0);
         byte[] bytes = pic.EncodeToPNG();
         pic.Apply(true, true);
         System.IO.File.WriteAllBytes("Lut.png", bytes);
+        RenderTexture.active = tmp;
         Destroy(pic);
         Destroy(lut);
     }

@@ -7,7 +7,7 @@ float2 Size;
 #define PI 3.14159
 #endif
 
-#define INTEGRATE_INC 0.05f
+#define INTEGRATE_INC 0.02f
 
 float Gaussian(float v, float r)
 {
