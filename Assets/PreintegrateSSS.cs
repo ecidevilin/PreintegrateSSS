@@ -8,7 +8,7 @@ public class PreintegrateSSS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RenderTexture lut = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear)
+        RenderTexture lut = new RenderTexture(1024, 1024, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear)
         {
             enableRandomWrite = true,
             dimension = UnityEngine.Rendering.TextureDimension.Tex2D,
